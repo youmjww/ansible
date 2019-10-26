@@ -43,3 +43,20 @@
         dest: /etc/sudoers
         backup: yes
         line: 'mfmf ALL=(ALL) NOPASSWD: ALL'
+
+    - name: mkdir /home/mfmf/.ssh
+      file:
+        path: /home/mfmf/.ssh
+        state: directory
+        owner: mfmf
+        group: mfmf
+        mode: 0700
+
+    - name: add pub key
+      copy:
+        src: template/authorized_keys.j2
+        dest: /home/mfmf/.ssh/authorized_keys
+        owner: mfmf
+        group: mfmf
+        mode: 0600
+        backup: no
