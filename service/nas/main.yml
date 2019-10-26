@@ -23,3 +23,15 @@
         name:
           - zsh
           - ntpdate
+
+    - name: add cron time
+      become: true
+      cron:
+        name: "時間修正"
+        minute: "5"
+        hour: "*"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        job: "ntpdate ntp.nict.jp"
+        state: present
