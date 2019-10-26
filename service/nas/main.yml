@@ -37,3 +37,9 @@
       user:
         name: mfmf
         shell: /bin/zsh
+
+    - name: non password sudo
+      lineinfile:
+        dest: /etc/sudoers
+        backup: yes
+        line: 'mfmf ALL=(ALL) NOPASSWD: ALL'
