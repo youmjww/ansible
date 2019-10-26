@@ -32,3 +32,8 @@
         weekday: "*"
         job: "ntpdate ntp.nict.jp"
         state: present
+
+    - name: create user
+      user:
+        name: mfmf
+        shell: /bin/zsh
