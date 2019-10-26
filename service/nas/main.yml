@@ -2,5 +2,6 @@
   user: ubuntu
   tasks:
     - name: set hostname
+      become: true
       hostname:
         name: nas
