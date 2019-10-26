@@ -5,3 +5,15 @@
       become: true
       hostname:
         name: nas
+
+    - name: snap installs
+      become: true
+      snap:
+        name:
+          - tree
+
+    - name: apt installs
+      become: true
+      apt:
+        name:
+          - zsh
