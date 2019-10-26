@@ -1,0 +1,5 @@
+- hosts: all
+  user: ubuntu
+  tasks:
+    - name: Create hoge directory
+      file: path=/tmp/fuga state=directory mode=0775 owner=ubuntu group=ubuntu
