@@ -60,3 +60,12 @@
         group: mfmf
         mode: 0600
         backup: no
+
+    - name: add .zshrc
+      copy:
+        src: template/zshrc.j2
+        dest: /home/mfmf/.zshrc
+        owner: mfmf
+        group: mfmf
+        mode: 0700
+        backup: no
