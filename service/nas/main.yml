@@ -6,6 +6,11 @@
       hostname:
         name: nas
 
+    - name: set timezone
+      become: true
+      timezone:
+        name: Asia/Tokyo
+
     - name: snap installs
       become: true
       snap:
@@ -17,3 +22,4 @@
       apt:
         name:
           - zsh
+          - ntpdate
