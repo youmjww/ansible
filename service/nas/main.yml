@@ -3,3 +3,6 @@
   tasks:
     - name: Create hoge directory
       file: path=/tmp/fuga state=directory mode=0775 owner=ubuntu group=ubuntu
+    - name: set hostname
+      hostname:
+        name: nas
