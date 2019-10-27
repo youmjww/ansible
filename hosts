@@ -1,2 +1,2 @@
 [nas]
-52.194.220.245 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/mfmf.pem
+ 54.199.224.224 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/mfmf.pem
