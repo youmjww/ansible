@@ -31,3 +31,16 @@
         - "  guest ok = yes"
         - "  guest only = yes"
         - "  force user = nas"
+
+    - name: mkdir /mnt/nas
+      file:
+        path: /mnt/nas
+        state: directory
+
+    - name: mount device
+      mount:
+        name: /mnt/nas
+        src: /dev/sda
+        fstype: ext4
+        opts: defaults
+        state: mounted
