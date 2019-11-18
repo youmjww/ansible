@@ -50,3 +50,10 @@
         name: smbd
         enabled: yes
         state: started
+
+    - name: chown nas directory
+      file:
+        path: /mnt/nas
+        owner: nas
+        group: nas
+        mode: 0744
