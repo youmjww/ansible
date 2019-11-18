@@ -14,7 +14,6 @@
 - name: apt installs
   apt:
     name:
-      - zsh
       - ntpdate
     update_cache: true
 
@@ -32,7 +31,7 @@
 - name: create user
   user:
     name: mfmf
-    shell: /bin/zsh
+    shell: /bin/bash
 
 - name: non password sudo
   lineinfile:
@@ -55,13 +54,4 @@
     owner: mfmf
     group: mfmf
     mode: 0600
-    backup: no
-
-- name: add .zshrc
-  copy:
-    src: template/zshrc.j2
-    dest: /home/mfmf/.zshrc
-    owner: mfmf
-    group: mfmf
-    mode: 0700
     backup: no
