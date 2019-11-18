@@ -44,3 +44,9 @@
         fstype: ext4
         opts: defaults
         state: mounted
+
+    - name: auto start smbd
+      service:
+        name: smbd
+        enabled: yes
+        state: started
