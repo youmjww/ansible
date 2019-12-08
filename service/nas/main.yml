@@ -40,7 +40,7 @@
     - name: mount device
       mount:
         name: /mnt/nas
-        src: /dev/sda
+        src: /dev/sda1
         fstype: ext4
         opts: defaults
         state: mounted
