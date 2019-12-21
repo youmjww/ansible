@@ -1,0 +1,15 @@
+
+---
+- hosts: springboard
+
+  vars:
+    host_name: "springboard"
+  roles:
+    - ../core
+  tasks:
+    - name: apt installs
+      apt:
+        name:
+          - ansible
+          - git
+        update_cache: true
